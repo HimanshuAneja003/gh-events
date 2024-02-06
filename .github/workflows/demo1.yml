@@ -1,10 +1,14 @@
 name: Events Demo 1
-on: 
+
+on:
   pull_request:
-    types: 
+    types:
       - opened
-  #Event
-  workflow_dispatch: 
+  workflow_dispatch:
+  push:
+    branches:
+      - dev
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,4 +24,4 @@ jobs:
       - name: Build code
         run: npm run build
       - name: Deploy project
-        run: echo "Deploying..."
+        run: echo "Deploying...Hello"
