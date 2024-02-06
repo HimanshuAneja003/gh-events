@@ -1,15 +1,15 @@
 name: Events Demo 1
-on: 
+
+on:
   pull_request:
-    types: 
+    types:
       - opened
-  #Event
   workflow_dispatch:
   push:
     branches:
-    - master
-    - 'dev-*'
-    -  'feat/**'
+      - master
+      - 'dev-*'
+      - 'feat/**'
   path:
     - '.github/workflows/*'
 
@@ -28,4 +28,4 @@ jobs:
       - name: Build code
         run: npm run build
       - name: Deploy project
-        run: echo "Deploying..."
+        run: echo "Deploying...Hello"
