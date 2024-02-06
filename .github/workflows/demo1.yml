@@ -7,11 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
-      - 'dev-*'
-      - 'feat/**'
-  path:
-    - '.github/workflows/*'
+      - dev
 
 jobs:
   deploy:
