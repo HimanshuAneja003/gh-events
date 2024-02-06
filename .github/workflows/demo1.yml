@@ -4,7 +4,15 @@ on:
     types: 
       - opened
   #Event
-  workflow_dispatch: 
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+    - 'dev-*'
+    -  'feat/**'
+  path:
+    - '.github/workflows/*'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
